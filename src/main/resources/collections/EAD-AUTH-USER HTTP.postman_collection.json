@@ -78,6 +78,16 @@
 									"key": "userType",
 									"value": "STUDENT",
 									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "priscila@email.com",
+									"disabled": true
+								},
+								{
+									"key": "userStatus",
+									"value": "ACTIVE",
+									"disabled": true
 								}
 							]
 						}
