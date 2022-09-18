@@ -14,3 +14,5 @@ spring:
         jdbc:
           lob.non_contextual_creation: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    show-sql: true
