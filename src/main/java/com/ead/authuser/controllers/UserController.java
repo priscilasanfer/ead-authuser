@@ -111,7 +111,7 @@ public class UserController {
             userModel.setLastUpdateDate(LocalDateTime.now(ZoneId.of("UTC")));
             userService.save(userModel);
 
-            log.debug("PUT updateUser userModel saved {}", userModel.toString());
+            log.debug("PUT updateUser userId saved {}", userModel.getUserId());
             log.info("User with id: {} updated successfully.", userModel.getUserId());
 
             return ResponseEntity
