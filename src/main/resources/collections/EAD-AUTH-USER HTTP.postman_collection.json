@@ -88,6 +88,16 @@
 									"key": "userStatus",
 									"value": "ACTIVE",
 									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Priscila",
+									"disabled": true
+								},
+								{
+									"key": "courseId",
+									"value": "ad766c13-9bb1-49aa-9a61-2d4d46cea9c9",
+									"disabled": true
 								}
 							]
 						}
@@ -204,7 +214,7 @@
 					"response": []
 				},
 				{
-					"name": "Get one user Copy",
+					"name": "Delete one user",
 					"request": {
 						"method": "DELETE",
 						"header": [],
