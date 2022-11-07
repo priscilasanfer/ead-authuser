@@ -4,3 +4,11 @@
 
 - Rodar o projeto no modo 
 > mvn spring-boot.run -Dspring-boot.run.arguments=--logging.level.com.ead=TRACE
+
+
+#### Executar o projeto
+
+- Rodar o projeto: https://github.com/priscilasanfer/service-registry
+- Rodar o projeto: https://github.com/priscilasanfer/api-gateway
+- Rodar o projeto: https://github.com/priscilasanfer/ead-course
+- Rodar a aplicação
