@@ -22,7 +22,7 @@ import java.util.Optional;
 @Log4j2
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/instructor")
+@RequestMapping("/instructors")
 public class InstructorController {
 
     @Autowired
@@ -30,15 +30,20 @@ public class InstructorController {
 
     @PostMapping("/subscription")
     public ResponseEntity<Object> saveSubscriptionInstructor(@RequestBody @Valid InstructorDto instructorDto) {
+        log.debug("POST saveSubscriptionInstructor instructorDto received: {}", instructorDto.toString());
+
         Optional<UserModel> userModelOptional = userService.findById(instructorDto.getUserId());
 
-        if(userModelOptional.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        if (userModelOptional.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found.");
         } else {
             var userModel = userModelOptional.get();
             userModel.setUserType(UserType.INSTRUCTOR);
             userModel.setLastUpdateDate(LocalDateTime.now(ZoneId.of("UTC")));
             userService.save(userModel);
+
+            log.debug("POST saveSubscriptionInstructor instructorId saved {} ", userModel.getUserId());
+            log.info("User saved successfully userId {} ", userModel.getUserId());
 
             return ResponseEntity.status(HttpStatus.OK).body(userModel);
         }
